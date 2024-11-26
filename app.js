@@ -81,5 +81,6 @@ function resetGame() {
     started = false;
     gameSeq = [];
     userSeq = [];
+    document.getElementById("high-score").innerHTML = `<h3>High Score: ${level}</h3>`;
     level = 0;
 }
