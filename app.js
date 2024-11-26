@@ -55,6 +55,9 @@ function checkAns(idx) {
         setTimeout(function() {
             document.querySelector("body").style.backgroundColor = "#121212";      
         }, 150);
+        if(level > highScore) {
+            document.getElementById("high-score").innerHTML = `<h3>High Score: ${level}</h3>`;
+        }
         resetGame();
     }
 }
