@@ -56,6 +56,7 @@ function checkAns(idx) {
             document.querySelector("body").style.backgroundColor = "#121212";      
         }, 150);
         if(level > highScore) {
+            highScore = level;
             document.getElementById("high-score").innerHTML = `<h3>High Score: ${level}</h3>`;
         }
         resetGame();
@@ -81,6 +82,7 @@ function resetGame() {
     started = false;
     gameSeq = [];
     userSeq = [];
-    document.getElementById("high-score").innerHTML = `<h3>High Score: ${level}</h3>`;
     level = 0;
+    currScore = 0;
+    document.getElementById("current-score").innerHTML = `<h3>Current Score: 0</h3>`;
 }
